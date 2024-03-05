@@ -12,9 +12,9 @@ void out_Phone(Phone a){
     cout << "+"<<a.cod_country<< "(" << a.cod_city << ")" <<a.number;
 }
 void in_Phone(Phone &a){
-    cout << "vvedite cod country "; cin >> a.cod_country;
-    cout << "vvedite cod city "; cin >> a.cod_city;
-    cout << "vvedite nomer "; cin >> a.number;
+    cout << "введите код страны(1 цифра): "; cin >> a.cod_country;
+    cout << "введите код города (3 цифры): "; cin >> a.cod_city;
+    cout << "введите номер (7 цифр): "; cin >> a.number;
 }
 
 int main() {
