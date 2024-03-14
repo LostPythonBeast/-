@@ -32,7 +32,7 @@ bool is_valid_phone_number(string number) {
     return true;
 }
 
-void out_Phone(Phone a) {
+void out_Phone(Phone& a) {
     cout << "+" << a.cod_country << "(" << a.cod_city << ")" << a.number;
 }
 string out_Phone_file(Phone a){
@@ -58,15 +58,14 @@ void in_Phone(Phone& a) {
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
-    Phone A, B = { "8", "8", "9" };
+    Phone A, B = {"8", "8", "9"};
 
     in_Phone(B);
     string s;
     ofstream out;
     out.open("perchik.txt");
-    if (out.is_open())
-    {
-        cout << out_Phone_file;
+    if (out.is_open()) {
+        out << B.number << B.cod_city << B.cod_country;
     }
     out.close();
     cout << "File has been written" << std::endl;
@@ -77,4 +76,5 @@ int main() {
         cout << s;
     }
     return 0;
+
 }
